@@ -1,0 +1,23 @@
+<div class="row p-1">
+  <div
+    class="col-sm-5  mx-4 mb-2 rounded p-2 shadow cborder"
+    *ngFor="let i of reposData"
+  >
+    <h4 class="text-primary">
+      <a [href]="i.html_url" class="text-decoration-none">{{i.name}}</a>
+    </h4>
+    <h6>{{i.description ? i.description : 'NA'}}</h6>
+    <button
+      class="btn btn-primary btn-sm m-1"
+    >
+      {{i.language ? i.language : 'NA'}}
+    </button>
+  </div>
+</div>
+
+<div class="loader d-flex justify-content-center align-items-center m-5" *ngIf="loader">
+  <div class="spinner-border text-primary" role="status">
+  </div>
+</div>
+
+<app-footer [reposLength]="repos_length"></app-footer>

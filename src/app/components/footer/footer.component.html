@@ -1,0 +1,20 @@
+<div class="text-center d-flex flex-row justify-content-center align-items-center p-2">
+  <nav>
+    <ul class="pagination shadow-sm">
+      <li class="page-item" (click)="changePage(activePage-1)" [ngClass]="activePage<=0 ? 'text-secondary':''"><a class="page-link">{{'<'}}</a></li>
+      <li class="page-item cursor-pointer" [ngClass]="i==activePage?'active':'text-primary'" *ngFor="let i of createRange(reposLength)" (click)="changePage(i)"><a class="page-link">{{i}}</a></li>
+      <li class="page-item"><a class="page-link" href="#" (click)="changePage(activePage+1)">{{'>'}}</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="text-center d-flex flex-row justify-content-center align-items-center p-2">
+  <button class="btn border border-1 rounded mx-4">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+    </svg>  Older
+  </button>
+  <button class="btn border border-1 rounded mx-4 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+  </svg> Newer</button>
+</div>

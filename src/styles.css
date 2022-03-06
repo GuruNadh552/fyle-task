@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  background-color: #002b70;
+}
+
+.cursor-pointer{
+  cursor: pointer!important;
+}
+
+.cborder{
+  border: 1px solid rgb(245, 245, 245)!important;
+}
