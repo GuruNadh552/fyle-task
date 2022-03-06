@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  gitToken:'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'
+  gitToken:'place the Git Token Here'
 };
 
 /*
